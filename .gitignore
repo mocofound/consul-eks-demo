@@ -1,0 +1,11 @@
+.terraform/
+terraform.tfstate.backup
+terraform.tfstate
+terraform.tfvars
+.terraform.tfstate.lock.info
+*.pem
+*kube_config*
+kubeconfig*
+*_values.yaml
+terraform/terraform.tfvars
+nohup.out

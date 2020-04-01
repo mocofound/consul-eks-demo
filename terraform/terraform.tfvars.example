@@ -1,0 +1,3 @@
+prefix="ahar"
+ssh_key_name = "aharness-nomad-demo"
+
