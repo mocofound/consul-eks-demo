@@ -59,3 +59,28 @@ kubectl apply -f ./app
 ```
 ./install_telem_stack.sh
 ```
+
+# Adding ACL support (external consul servers)
+
+checkout bootstrap_acl.sh for details
+
+```
+export CONSUL_HTTP_TOKEN=<mgmt token>
+./bootstrap_acl.sh <cluster name>
+```
+
+update helm values for ACL usage
+
+```
+global:
+  bootstrapACLs: true
+syncCatalog:
+  enabled: true
+  aclSyncToken:
+    secretName: hashicorp-consul-client-acl-token
+    secretKey: token  
+```
+Some helpful docs
+
+https://medium.com/@shy_40788/intro-to-hashicorp-consuls-kubernetes-authentication-181bc1418318
+https://www.consul.io/docs/acl/acl-auth-methods.html

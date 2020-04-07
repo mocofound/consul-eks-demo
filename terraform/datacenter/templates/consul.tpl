@@ -64,6 +64,12 @@ bootstrap_expect = 1
 ports {
   grpc = 8502
 }
+
+acl = {
+  enabled = true
+  default_policy = "deny"
+  enable_token_persistence = true
+}
 client_addr = "0.0.0.0"
 enable_central_service_config = true
 EOF
