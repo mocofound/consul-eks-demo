@@ -1,0 +1,12 @@
+---
+apiVersion: getambassador.io/v2
+kind: Mapping
+metadata:
+  name: consul-qotm-mapping-tls
+spec:
+  prefix: /qotm-consul-tls/
+  service: qotm-mtls-sidecar-proxy
+  resolver: consul-west
+  tls: ambassador-consul
+  load_balancer:
+    policy: round_robin

@@ -9,3 +9,6 @@ kubeconfig*
 *_values.yaml
 terraform/terraform.tfvars
 nohup.out
+ambassador-qotm/.DS_Store
+ambassador-qotm/notes
+.DS_Store

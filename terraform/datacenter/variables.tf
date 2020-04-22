@@ -31,5 +31,5 @@ variable "consul_address" {
 }
 
 variable "worker_instance_size" {
-  default = "t2.large"
+  default = "m5a.xlarge"
 }

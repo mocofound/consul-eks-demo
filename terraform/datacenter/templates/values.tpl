@@ -3,8 +3,8 @@ global:
   # Enterprise
   # image: "hashicorp/consul-enterprise:1.7.0-ent"
   # OSS
-  image: "consul:1.7.0"
-  imageK8S: "hashicorp/consul-k8s:0.11.0"
+  image: "consul:1.7.2"
+  imageK8S: "hashicorp/consul-k8s:0.13.0"
   # bootstrapACLs: true
   # gossipEncryption:
   #   # secretName is the name of the Kubernetes secret that holds the gossip

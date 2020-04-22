@@ -46,6 +46,17 @@ To install OpenFAAS in each EKS cluster run the following command.
 ./install_openfaas.sh
 ```
 
+## Configure Consul Proxy Config for Mesh Gateways
+The proxy-defaults config entry kind allows for configuring global config defaults across all services for Connect proxy configuration.
+```
+consul config write ./config_entries/proxy-defaults.hcl
+```
+
+## Configure Consul Service Resolver for Currency Service
+The service-resolver config entry kind controls which service instances should satisfy Connect upstream discovery requests for a given service name.
+```
+consul config write ./config_entries/currency_failover.hcl
+```
 
 # Application Deployment
 

@@ -35,7 +35,7 @@ spec:
           - name: UPSTREAM_URIS
             value:
           - name: MESSAGE
-            value: "Currency response"
+            value: "Backend Currency Service running in ${cluster-name}"
           - name: NAME
             value: "currency"
           - name: SERVER_TYPE

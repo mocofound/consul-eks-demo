@@ -7,7 +7,7 @@ sudo apt-get update
 sudo apt-get install -y unzip curl jq dnsmasq
 
 #Download Consul
-CONSUL_VERSION="1.7.0"
+CONSUL_VERSION="1.7.2"
 curl --silent --remote-name https://releases.hashicorp.com/consul/$${CONSUL_VERSION}/consul_$${CONSUL_VERSION}_linux_amd64.zip
 
 #Install Consul
@@ -121,7 +121,7 @@ services:
     environment:
       LISTEN_ADDR: 0.0.0.0:9094
       NAME: currency
-      MESSAGE: "Currency Service running in ${cluster-name}"
+      MESSAGE: "Backend Currency Service running in ${cluster-name} VM"
       SERVER_TYPE: "http"
     volumes:
       - "./currency.hcl:/config/currency.hcl"

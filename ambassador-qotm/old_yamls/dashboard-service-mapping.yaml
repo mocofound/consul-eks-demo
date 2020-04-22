@@ -1,0 +1,14 @@
+---
+apiVersion: getambassador.io/v2
+kind: Mapping
+metadata:
+  name: dashboard
+spec:
+  prefix: /dashboard/
+  service: dashboard-sidecar-proxy
+  use_websocket: false
+  #use_websocket: true
+  resolver: consul-west
+  tls: ambassador-consul
+  load_balancer:
+    policy: round_robin

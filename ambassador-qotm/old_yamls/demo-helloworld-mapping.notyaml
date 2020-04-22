@@ -1,0 +1,14 @@
+# This mapping maps to the sidecar-proxy 
+# so that Ambassador can do mTLS with Consul
+---
+apiVersion: getambassador.io/v2
+kind: Mapping
+metadata:
+  name: demo-helloworld
+spec:
+  prefix: /helloworld/
+  service: demo-helloworld-sidecar-proxy
+  resolver: consul-west
+  tls: ambassador-consul
+  load_balancer:
+    policy: round_robin

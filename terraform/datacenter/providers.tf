@@ -1,6 +1,7 @@
 
 provider "aws" {
   version = ">= 2.28.1"
+  #version = "~> 2.34.0"
   region  = var.region
 }
 
@@ -33,5 +34,5 @@ provider "kubernetes" {
   cluster_ca_certificate = base64decode(data.aws_eks_cluster.cluster.certificate_authority.0.data)
   token                  = data.aws_eks_cluster_auth.cluster.token
   load_config_file       = false
-  version                = "1.10.0"
+  version                = "~>1.11.1"
 }

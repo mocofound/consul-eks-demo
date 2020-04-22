@@ -1,0 +1,27 @@
+---
+apiVersion: getambassador.io/v2
+kind: ConsulResolver
+metadata:
+  name: consul-west
+spec:
+  address: 10.0.1.100:8500
+  datacenter: west
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: ambassador
+spec:
+  type: LoadBalancer
+  selector:
+    service: ambassador
+  ports:
+    - port: 80
+      targetPort: 8080
+      protocol: TCP
+      name: http
+    - port: 443
+      targetPort: 8443
+      protocol: TCP
+      name: https
+
