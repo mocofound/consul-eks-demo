@@ -37,13 +37,16 @@ export KUBECONFIG=$(pwd)/$(ls kubeconfig*west*)
 ./install_telem_stack.sh
 unset KUBECONFIG
 
-# Vault demo
-echo "---Calling Vault k8s Demo---"
-export KUBECONFIG=$(pwd)/$(ls kubeconfig*west*)
-cd ./k8s-transit-app
-./full_stack_deploy.sh
-cd ..
-unset KUBECONFIG
+
+# # Vault demo
+# #TODO: WIP
+# echo "---Calling Vault k8s Demo---"
+# export KUBECONFIG=$(pwd)/$(ls kubeconfig*west*)
+# cd ./k8s-transit-app
+# ./full_stack_deploy.sh
+# cd ..
+# unset KUBECONFIG
+# */
 
 #How to Get Started
 echo "command to access dashboard service:"
