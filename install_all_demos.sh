@@ -6,6 +6,12 @@ echo "---Calling WAN Join Demo---"
 ./wan_join.sh
 
 # Consul k8s
+echo "---Calling config Entries---"
+export KUBECONFIG=$(pwd)/$(ls kubeconfig*west*)
+./install_config_entries.sh
+unset KUBECONFIG
+
+# Consul k8s
 echo "---Calling consul-k8s Demo---"
 ./install_consul_k8s.sh
 
@@ -17,17 +23,19 @@ echo "---Modify kubesystem CoreDNS for Consul DNS Integration---"
 echo "---Calling OpenFaas Demo---"
 ./install_openfaas.sh
 
-# Ambassador Deployment
-echo "---Calling Ambassador API Gateway Demo---"
-./install_ambassador_demo.sh
-
 # k8s services Deployment
 echo "---Calling k8s services Demo---"
 ./install_k8s_services.sh
 
+# Ambassador Deployment
+echo "---Calling Ambassador API Gateway Demo---"
+./install_ambassador_demo.sh
+
 # Metrics Pipeline
 echo "---Calling Telemetry Metrics Demo---"
+export KUBECONFIG=$(pwd)/$(ls kubeconfig*west*)
 ./install_telem_stack.sh
+unset KUBECONFIG
 
 # Vault demo
 echo "---Calling Vault k8s Demo---"

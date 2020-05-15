@@ -1,10 +1,10 @@
 
 kind            = "service-resolver"
 name            = "counting"
-connect_timeout = "3s"
+connect_timeout = "2s"
 failover = {
   "*" = {
     service    = "counting"
-    datacenters = ["$west","east"]
+    datacenters = ["west","east"]
   }
-}
+}  

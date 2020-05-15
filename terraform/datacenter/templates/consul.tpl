@@ -7,7 +7,7 @@ sudo apt-get update
 sudo apt-get install -y unzip curl jq dnsmasq
 
 #Download Consul
-CONSUL_VERSION="1.7.2"
+CONSUL_VERSION="1.7.0"
 curl --silent --remote-name https://releases.hashicorp.com/consul/$${CONSUL_VERSION}/consul_$${CONSUL_VERSION}_linux_amd64.zip
 
 #Install Consul
@@ -144,7 +144,7 @@ version: "3.3"
 services:
 
   gateway:
-    image: nicholasjackson/consul-envoy
+    image: nicholasjackson/consul-envoy:v1.7.0-v0.12.2
     network_mode: "host"
     environment:
       CONSUL_HTTP_ADDR: $LAN_IP:8500

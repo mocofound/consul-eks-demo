@@ -4,7 +4,7 @@ kind: Mapping
 metadata:
   name: web
 spec:
-  prefix: /web
+  prefix: /web/
   service: web-sidecar-proxy
   resolver: consul-west
   tls: ambassador-consul
