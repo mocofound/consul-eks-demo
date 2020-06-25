@@ -23,6 +23,16 @@ cd ..
 
 ``` 
 
+## Install All Demos
+
+Run the following bash script to demo Consul Connect, WAN Join, install OpenFaas, Deploy Ambassador API Gateway, etc.
+
+```
+./install_all_demos.sh
+```
+
+# Note: Below commands are all executed by 'run_all_demos', but can be used as a guide to the contents of this repo.
+
 ## WAN Join
 
 After provisioning the infrastructure, you can WAN join the two datacenters using the following script. 
